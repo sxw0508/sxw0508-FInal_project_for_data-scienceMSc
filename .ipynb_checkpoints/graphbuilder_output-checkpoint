@@ -1,0 +1,13 @@
+// ScrapeGraphAI Updated Graph
+digraph {
+	node [color=lightblue shape=ellipse style=filled]
+	SearchInternetNode [label="SearchInternetNode (entry)" color=green shape=doublecircle]
+	FetchNode [label=FetchNode]
+	ParseNode [label=ParseNode]
+	RAGNode [label=RAGNode]
+	GenerateAnswerNode [label=GenerateAnswerNode]
+	SearchInternetNode -> FetchNode
+	FetchNode -> ParseNode
+	ParseNode -> RAGNode
+	RAGNode -> GenerateAnswerNode
+}
